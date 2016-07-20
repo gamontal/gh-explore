@@ -18,6 +18,17 @@ const should = require('should');
       });
     });
 
+    it('GET /showcases?page=<page_num>', function (done) {
+      ghExplore.showcases.all({ page_num: 2 }, function (err, res) {
+        try {
+          should(res).have.property('page', 2);
+          done();
+        } catch (e) {
+          done(e);
+        }
+      });
+    });
+
     it('GET /showcases/<showcase_name>', function (done) {
       ghExplore.showcases.get({ showcase: 'machine-learning' }, function (err, res) {
         try {
