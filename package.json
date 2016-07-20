@@ -1,6 +1,6 @@
 {
   "name": "gh-explore",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A NodeJS library for GitHub's Explore section",
   "main": "index.js",
   "directories": {
