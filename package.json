@@ -1,0 +1,27 @@
+{
+  "name": "gh-explore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmontalvoriv/gh-explore.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "api"
+  ],
+  "author": "Gabriel Montalvo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gmontalvoriv/gh-explore/issues"
+  },
+  "homepage": "https://github.com/gmontalvoriv/gh-explore#readme"
+}
