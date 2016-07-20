@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/ghexplore-api');
+module.exports = require('./lib/gh-explore');
