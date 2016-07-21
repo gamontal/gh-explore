@@ -100,6 +100,17 @@ const should = require('should');
       });
     });
 
+    it('GET /integrations/feature/<category>', function (done) {
+      ghExplore.integrations.all({ category: 'all' }, function (err, res) {
+        try {
+          should(res).have.property('status', 'successful');
+          done();
+        } catch (e) {
+          done(e);
+        }
+      });
+    });
+
     it('GET /integrations/<integration_name>', function (done) {
       ghExplore.integrations.get({ integration: 'travis-ci' }, function (err, res) {
         try {
@@ -115,6 +126,17 @@ const should = require('should');
       ghExplore.integrations.search({ query: 'travis' }, function (err, res) {
         try {
           should(res).have.property('status', 'successful');
+          done();
+        } catch (e) {
+          done(e);
+        }
+      });
+    });
+
+    it('/integrations/feature/<bad_category> -> should fail', function (done) {
+      ghExplore.integrations.all({ category: 'bad-category' }, function (err, res) {
+        try {
+          should(err).have.property('status', 'failed');
           done();
         } catch (e) {
           done(e);
