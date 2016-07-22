@@ -7,7 +7,7 @@ const should = require('should');
 describe('Showcases:', function () {
 
   it('GET /showcases', function (done) {
-    ghExplore.showcases.all(function (err, res) {
+    ghExplore.showcases(function (err, res) {
       try {
         should(res).have.property('status', 'successful');
         done();
@@ -18,7 +18,7 @@ describe('Showcases:', function () {
   });
 
   it('GET /showcases?page=<page_num>', function (done) {
-    ghExplore.showcases.all({ page_num: 2 }, function (err, res) {
+    ghExplore.showcases({ page_num: 2 }, function (err, res) {
       try {
         should(res).have.property('page', 2);
         done();
@@ -89,7 +89,7 @@ describe('Showcases:', function () {
 describe('Integrations:', function () {
 
   it('GET /integrations', function (done) {
-    ghExplore.integrations.all(function (err, res) {
+    ghExplore.integrations(function (err, res) {
       try {
         should(res).have.property('status', 'successful');
         done();
@@ -100,7 +100,7 @@ describe('Integrations:', function () {
   });
 
   it('GET /integrations/feature/<category>', function (done) {
-    ghExplore.integrations.all({ category: 'all' }, function (err, res) {
+    ghExplore.integrations({ category: 'all' }, function (err, res) {
       try {
         should(res).have.property('status', 'successful');
         done();
@@ -133,7 +133,7 @@ describe('Integrations:', function () {
   });
 
   it('/integrations/feature/<bad_category> -> should fail', function (done) {
-    ghExplore.integrations.all({ category: 'bad-category' }, function (err, res) {
+    ghExplore.integrations({ category: 'bad-category' }, function (err, res) {
       try {
         should(err).have.property('status', 'failed');
         done();
