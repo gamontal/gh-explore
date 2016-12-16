@@ -66,7 +66,7 @@ ghExplore.integrations(function (err, integrations) {
 
 ```javascript
 ghExplore.trending(function (err, repositories) {
-  console.log(respositories);
+  console.log(repositories);
 });
 ```
 
@@ -126,6 +126,12 @@ Fetch GitHub integrations.
 Name | Description | Type |
 -----|------------ |------|
 category| filter by category | `String` | 
+
+### `integrations.categories`
+
+Fetch GitHub integrations categories
+
+`.integrations.categories(callback)`
 
 ### `integrations.get`
 
