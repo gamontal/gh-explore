@@ -1,3 +1,5 @@
+## ⚠️ This repository is no longer maintained.
+
 # gh-explore [![Build Status](https://travis-ci.org/gmontalvoriv/gh-explore.svg?branch=master)](https://travis-ci.org/gmontalvoriv/gh-explore)
 
 > A NodeJS library for GitHub's Explore section 📣 :octocat: 🔥
